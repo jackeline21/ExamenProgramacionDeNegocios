@@ -23,6 +23,8 @@ namespace Examen1ParcialPrograNegocios
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
     }
 }

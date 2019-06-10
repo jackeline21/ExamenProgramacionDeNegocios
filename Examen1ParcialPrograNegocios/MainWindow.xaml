@@ -5,8 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Examen1ParcialPrograNegocios"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Planilla Mensual" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Background="Beige" >
+            <Label HorizontalAlignment="Center" FontSize="16" Margin="2" Content="Bienvenido a tu planilla mensual"/>
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Ingresa tus datos:"/>
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Nombre del empleado:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=Nombre, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Identidad:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=Identidad, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Horas trabajadas:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=horasTrabajadas, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Pago por hora normal:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=PagoProHora, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Horas extra:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=HorasExtra, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Pago por hora extra:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=PagoHoraExtra, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel Background="Beige" Grid.Column="1">
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Sueldo sin deducciones:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=SueldoAntes, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Sueldo de las horas extra:"/>
+            <TextBlock Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=SueldoHorasExtra, Mode=TwoWay}" />
+
+            <Label HorizontalAlignment="Left" FontSize="14" Content="Sueldo total:"/>
+            <TextBox Width="300" Height="30" HorizontalAlignment="Left" Text="{Binding Path=SueldoTotal, Mode=TwoWay}" />
+
+        </StackPanel>
     </Grid>
+
 </Window>
